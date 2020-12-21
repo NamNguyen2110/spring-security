@@ -13,7 +13,8 @@ public class WebServiceConfig implements WebMvcConfigurer {
                 .allowedOrigins("*")
                 .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
-                .allowCredentials(true)
+                // notice: enable in some swagger url access to swagger interface
+                .allowCredentials(false)
                 .maxAge(MAX_AGE_SECS);
     }
 
