@@ -27,10 +27,12 @@ public class RoleServiceImpl extends MessageBundle implements RoleService {
     public List<RoleDto> createRoles(List<RoleDto> roleDto) throws ExistedDataException, InputRequestException {
         List<RoleDto> dataList = new ArrayList<>();
         for (RoleDto dto : roleDto) {
-            if (roleRepo.existsByRoleName(dto.getRoleName()))
+            if (roleRepo.existsByRoleName(dto.getRoleName())) {
                 throw new ExistedDataException(getMessage("message.existed"));
-            if (dto.getRoleName().startsWith(RegexContant.ROLE))
+            }
+            if (dto.getRoleName().startsWith(RegexContant.ROLE)) {
                 throw new InputRequestException(getMessage("message.role.invalid"));
+            }
             Role role = ObjectMapperUtils.toDto(dto, Role.class);
             roleRepo.save(role);
             dataList.add(ObjectMapperUtils.toEntity(role, RoleDto.class));

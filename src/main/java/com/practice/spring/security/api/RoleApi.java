@@ -16,5 +16,5 @@ import java.util.List;
 @RequestMapping("/v1/api/users/roles")
 public interface RoleApi {
     @PostMapping("")
-    ResponseEntity<ResponseData> createRole(@RequestBody List<RoleDto> roleDto);
+    ResponseEntity<ResponseData> createRole(@RequestBody List<RoleDto> roleDto) throws ExistedDataException, InputRequestException;
 }

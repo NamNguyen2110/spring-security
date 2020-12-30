@@ -16,11 +16,8 @@ import com.practice.spring.security.model.User;
 import com.practice.spring.security.repository.AuthorRepository;
 import com.practice.spring.security.repository.RoleRepository;
 import com.practice.spring.security.repository.UserRepository;
-import com.practice.spring.security.repository.VerificationTokenRepository;
 import com.practice.spring.security.security.TokenProcess;
-import com.practice.spring.security.service.EmailService;
 import com.practice.spring.security.service.UserService;
-import com.practice.spring.security.service.VerificationTokenService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,7 +30,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.UUID;
 
 @Service("userService")
 @RequiredArgsConstructor
