@@ -1,5 +1,7 @@
 package com.practice.spring.security.config;
 
+import com.practice.spring.security.bundle.MessageBundle;
+import com.practice.spring.security.exception.InputRequestException;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.domain.AuditorAware;
@@ -11,7 +13,7 @@ import java.util.Optional;
 
 @Configuration
 @EnableJpaAuditing(auditorAwareRef = "auditorProvider")
-public class JpaAuditingConfig {
+public class JpaAuditingConfig extends MessageBundle {
     @Bean
     public AuditorAware<String> auditorProvider() {
         return new AuditorAwareImpl();
@@ -23,7 +25,11 @@ public class JpaAuditingConfig {
         public Optional<String> getCurrentAuditor() {
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
             if (authentication == null) {
-                return null;
+                try {
+                    throw new InputRequestException(getMessage("message.server"));
+                } catch (InputRequestException e) {
+                    e.printStackTrace();
+                }
             }
             return Optional.ofNullable(authentication.getName());
         }

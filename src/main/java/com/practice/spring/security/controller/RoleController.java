@@ -1,32 +1,36 @@
 package com.practice.spring.security.controller;
 
 import com.practice.spring.security.api.RoleApi;
+import com.practice.spring.security.bundle.MessageBundle;
 import com.practice.spring.security.common.respond.ResponseData;
 import com.practice.spring.security.dto.RoleDto;
-import com.practice.spring.security.exception.BadRequestException;
 import com.practice.spring.security.exception.ExistedDataException;
+import com.practice.spring.security.exception.InputRequestException;
 import com.practice.spring.security.service.RoleService;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @Slf4j
 @RestController
+@RequiredArgsConstructor
 public class RoleController implements RoleApi {
-    @Autowired
-    private RoleService roleService;
+    Logger logger = LoggerFactory.getLogger(RoleController.class);
+    private final RoleService roleService;
 
     @Override
-    public ResponseEntity<?> createRole(RoleDto roleDto) throws BadRequestException, ExistedDataException {
+    public ResponseEntity<ResponseData> createRole(List<RoleDto> roleDto) {
         try {
-            log.info("Start API /role and method post");
-            roleService.createRoles(roleDto);
-            log.info("End with successful API /role and return the result");
+            List<RoleDto> data = roleService.createRoles(roleDto);
+            return ResponseEntity.ok(ResponseData.ofSuccess(MessageBundle.getMessage("message.api.success"), data));
         } catch (Exception e) {
-            e.getStackTrace();
-            log.info("End with exception API /role");
+            logger.info("Create role API Exception");
+            return ResponseEntity.ok(ResponseData.ofFail(MessageBundle.getMessage("message.server")));
         }
-        return ResponseEntity.ok(ResponseData.ofSuccess("message.api.invalid"));
     }
 }

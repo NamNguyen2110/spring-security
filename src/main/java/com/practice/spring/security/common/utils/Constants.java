@@ -1,8 +1,7 @@
 package com.practice.spring.security.common.utils;
 
 public final class Constants {
-    public static final String path_avatar = "";
-    // Regex for acceptable logins
+    public static final String PATH_AVATAR = "";
     public static final String LOGIN_REGEX = "^[_.@A-Za-z0-9-]*$";
     public static final String VIET_NAM_PHONE_REGEX = "[0-9]{11}";
 
@@ -22,8 +21,6 @@ public final class Constants {
     public static final String RETURN_CODE_SUCCESS = "200";
     public static final String RETURN_CODE_ERROR = "400";
 
-    private Constants() {
-    }
 
     public static final class ERROR_CODE {
 

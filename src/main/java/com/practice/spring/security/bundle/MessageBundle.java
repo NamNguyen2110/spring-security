@@ -10,6 +10,7 @@ import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 public class MessageBundle {
+
     private static final Logger log = LoggerFactory.getLogger(MessageBundle.class);
     private static final String BASE_NAME = "message";
 

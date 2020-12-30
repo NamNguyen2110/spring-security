@@ -5,9 +5,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class RoleDto {
+@NoArgsConstructor
+public class SignUpUserDto extends SignInDto {
+    private String username;
     private String roleName;
-
 }

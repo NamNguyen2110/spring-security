@@ -12,7 +12,7 @@ import java.util.*;
 
 public class CommonUtils {
 
-    public static int count(String str, char c) {
+    private static int count(String str, char c) {
         if (isNullOrEmpty(str)) {
             return 0;
         }
@@ -40,10 +40,7 @@ public class CommonUtils {
     }
 
     public static boolean isNullOrEmpty(Collection<?> list) {
-        if (list == null || list.size() == 0) {
-            return true;
-        }
-        return false;
+        return list == null || list.size() == 0;
     }
 
     /**
@@ -54,20 +51,18 @@ public class CommonUtils {
      * @return Created by NQManh - 18/6/2019
      */
     public static boolean maxLength(String s, int maxLength) {
-        return s.length() <= maxLength ? true : false;
+        return s.length() <= maxLength;
     }
 
     /**
      * Check min length of String
-     *
      */
     public static boolean minLength(String s, int minLength) {
-        return s.length() >= minLength ? true : false;
+        return s.length() >= minLength;
     }
 
     /**
      * Check String only contain number
-
      */
     public static boolean isNumber(String s) {
         return s.matches("[0-9]+");
@@ -81,73 +76,15 @@ public class CommonUtils {
         } catch (Exception e) {
             return false;
         }
-//        if(cell == null || "".equals(cell.trim()))
-//            return false;
-//        int count = 0;
-//        for (int i = 0; i < cell.length(); i++) {
-//            if (cell.charAt(i) == '.') {
-//                count++;
-//                if (count > 1) {
-//                    return false;
-//                }
-//            }
-//        }
-//
-//        cell = cell.replaceAll("\\.", "0");
-//        if(cell.charAt(0) == '-') {
-//            cell = cell.replaceAll("-", "0");
-//        }
-//        return isNumber(cell);
-    }
-
-    public static void main(String args[]) {
-        System.out.println(isDigitWithDot("anndjanskdja.smjkansdj"));
-        System.out.println(isDigitWithDot("21216514.13216546"));
-        System.out.println(isDigitWithDot("6.500000000000001E-4"));
-
-
-        System.out.println(convertCellDigit("21216514.13216546"));
-        System.out.println(convertCellDigit("21216514.13216546"));
-
-        System.out.println(convertCellDigit("21216514.13686"));
-        System.out.println(convertCellDigit("-2121212312313123123116514"));
-
-
-        System.out.println(convertCellDigit("21E12"));
-        System.out.println(convertCellDigit("1.98173058152535097597990"));
-
-
-        System.out.println(String.format("%.15f", 1000000000000000.0));
-        System.out.println(10000000000000.0);
-
-
-        List<Integer> ints = new ArrayList<>();
-        ints.addAll(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17));
-        Collections.shuffle(ints);
-        System.out.println(ints);
-
-
-        String str1 = "22.1234567891111111111111111111111";
-        String str2 = "22.1234567891111111111111111111111";
-
-        BigDecimal val1 = new BigDecimal(str1);
-        BigDecimal val2 = new BigDecimal(str2);
-        System.out.println("compare");
-        System.out.println(val1.compareTo(val2));
-
-        System.out.println(str1.equals(str2));
-        System.out.println(str1.contentEquals(str2));
-
     }
 
     public static String toPlainString(Double value) {
         if (value == null)
             return "";
-        BigDecimal big = new BigDecimal(value, MathContext.DECIMAL64);
+        MathContext mathContext = MathContext.DECIMAL64;
+        BigDecimal big = new BigDecimal(value, mathContext);
 
-//        return String.format("%.15f", value);
-        String value1 = big.toPlainString();
-        return value1;
+        return big.toPlainString();
     }
 
     public static String toPlainString(Long value) {
@@ -155,7 +92,6 @@ public class CommonUtils {
             return "";
         BigDecimal big = new BigDecimal(value);
 
-//        return String.format("%.15f", value);
         return big.toPlainString();
 
     }
@@ -180,11 +116,8 @@ public class CommonUtils {
             BigDecimal d = new BigDecimal(cell);
             DecimalFormat f = new DecimalFormat("###,###.##");
             cell = f.format(d);
-//            if(cell.indexOf(".") == -1){
-//                return cell + ".0";
-//            }
         } catch (Exception e) {
-
+            e.getStackTrace();
         }
         return cell;
     }
@@ -205,7 +138,6 @@ public class CommonUtils {
 
     /**
      * Check String only contain alphanumeric character
-     *
      */
     public static boolean isAlphanumeric(String s) {
         return s.matches("[a-zA-Z]+");
@@ -213,7 +145,6 @@ public class CommonUtils {
 
     /**
      * Check String only contain number, alphanumeric, underscore
-     *
      */
     public static boolean isNumberOrAlphanumeric(String s) {
         return s.matches("[a-zA-Z0-9_]+");
@@ -230,10 +161,6 @@ public class CommonUtils {
         }
     }
 
-    //    @Override
-//    public boolean equals(Object obj) {
-//        return super.equals(obj);
-//    }
     public static Double parseDoubleExcel(String data) {
         if (data == null || "".equals(data)) {
             return 0d;
@@ -265,7 +192,7 @@ public class CommonUtils {
                 Double.parseDouble(data);
                 return true;
             } catch (Exception e) {
-
+                e.printStackTrace();
             }
         }
         return false;
@@ -273,12 +200,12 @@ public class CommonUtils {
 
     public static double parseDoubleExcelDemo(String data) {
         if (data == null || "".equals(data)) {
-            return 0d;
+            return 0;
         }
         try {
             return Double.parseDouble(data);
         } catch (Exception e) {
-            return 0d;
+            return 0;
         }
     }
 
@@ -361,9 +288,7 @@ public class CommonUtils {
             return ((BigDecimal) object).longValue();
         }
 
-        if (object instanceof Boolean) {
-            return ((Boolean) object) ? 1L : 0L;
-        }
+        if (object instanceof Boolean) return (!((Boolean) object)) ? 0L : 1L;
 
         return null;
 
@@ -401,16 +326,6 @@ public class CommonUtils {
     public static boolean checkLengthUTF8(String s, int min, int max) {
         return (s.getBytes().length >= min && s.getBytes().length <= max);
     }
-//    public static boolean safeToBoolean(Object object){
-//        if (object ==null){
-//            return false;
-//        }
-//        Long result = safeToLong(object);
-//        if (result ==1){
-//            return  true;
-//        }
-//        return false;
-//    }
 
     public static boolean compareString(String a, String b) {
         a = a == null ? "" : a.trim();

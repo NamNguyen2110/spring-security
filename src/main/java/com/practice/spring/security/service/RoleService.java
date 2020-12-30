@@ -1,10 +1,11 @@
 package com.practice.spring.security.service;
 
 import com.practice.spring.security.dto.RoleDto;
-import com.practice.spring.security.exception.BadRequestException;
 import com.practice.spring.security.exception.ExistedDataException;
+import com.practice.spring.security.exception.InputRequestException;
+
+import java.util.List;
 
 public interface RoleService {
-    void createRoles(RoleDto roleDto) throws ExistedDataException, BadRequestException;
-
+    List<RoleDto> createRoles(List<RoleDto> roleDto) throws ExistedDataException, InputRequestException;
 }

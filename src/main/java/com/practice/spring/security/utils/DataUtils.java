@@ -19,6 +19,9 @@ import java.util.regex.Pattern;
 
 
 public class DataUtils {
+    private DataUtils(){
+
+    }
     private static final Logger logger = LoggerFactory.getLogger(DataUtils.class);
 
     public static boolean isNullOrEmpty(final Object[] collection) {
@@ -29,11 +32,11 @@ public class DataUtils {
         return !nullOrEmpty(text);
     }
 
-    public static boolean nonEmpty(Collection collection) {
+    public static boolean nonEmpty(Collection<?> collection) {
         return !nullOrEmpty(collection);
     }
 
-    public static boolean nullOrEmpty(Collection objects) {
+    public static boolean nullOrEmpty(Collection<?> objects) {
         return objects == null || objects.isEmpty();
     }
 
