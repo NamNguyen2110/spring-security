@@ -4,8 +4,10 @@ import com.practice.spring.security.model.User;
 import com.practice.spring.security.model.VerificationToken;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface VerificationTokenRepository extends JpaRepository<VerificationToken, Integer> {
-    VerificationToken findByToken(String token);
+import java.util.Optional;
 
-    VerificationToken findByUser(User user);
+public interface VerificationTokenRepository extends JpaRepository<VerificationToken, Integer> {
+    Optional<VerificationToken> findByToken(String token);
+
+    Optional<VerificationToken> findByUser(User user);
 }

@@ -1,6 +1,7 @@
 package com.practice.spring.security.service.impl;
 
 import com.practice.spring.security.bundle.MessageBundle;
+import com.practice.spring.security.common.respond.ResponseData;
 import com.practice.spring.security.common.utils.CommonUtils;
 import com.practice.spring.security.common.validator.ValidatorBuilder;
 import com.practice.spring.security.common.validator.ValidatorGroup;
@@ -13,11 +14,15 @@ import com.practice.spring.security.exception.InputRequestException;
 import com.practice.spring.security.model.Author;
 import com.practice.spring.security.model.Role;
 import com.practice.spring.security.model.User;
+import com.practice.spring.security.model.VerificationToken;
 import com.practice.spring.security.repository.AuthorRepository;
 import com.practice.spring.security.repository.RoleRepository;
 import com.practice.spring.security.repository.UserRepository;
+import com.practice.spring.security.repository.VerificationTokenRepository;
 import com.practice.spring.security.security.TokenProcess;
+import com.practice.spring.security.service.EmailService;
 import com.practice.spring.security.service.UserService;
+import com.practice.spring.security.service.VerificationTokenService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,7 +34,13 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.mail.MessagingException;
+import java.sql.Timestamp;
 import java.util.List;
+import java.util.Optional;
+import java.util.Random;
+import java.util.UUID;
+import java.util.concurrent.ThreadLocalRandom;
 
 @Service("userService")
 @RequiredArgsConstructor
@@ -41,9 +52,10 @@ public class UserServiceImpl extends MessageBundle implements UserService {
     private final UserRepository userRepo;
     private final AuthenticationManager authenticationManager;
     private final TokenProcess tokenProcess;
-//    private final VerificationTokenRepository verificationTokenRepo;
-//    private final VerificationTokenService verificationTokenService;
-//    private final EmailService emailService;
+    private final VerificationTokenRepository verificationTokenRepo;
+    private final VerificationTokenService verificationTokenService;
+    private final EmailService emailService;
+    private final int RANDOM_SIZE_MAX_VALUE = 999999;
 
     @Override
     @Transactional
@@ -93,9 +105,21 @@ public class UserServiceImpl extends MessageBundle implements UserService {
             authorRepo.save(author);
             logger.info("Waiting a confirmation email.....");
             // Email confirmation
-//            String token = UUID.randomUUID().toString();
-//            verificationTokenService.save(user, token);
-//            emailService.sendEmail(user);
+            Optional<User> userSaved = Optional.of(user);
+            userSaved.ifPresent(
+                    u -> {
+                        try {
+                            Random random = new Random();
+//                            int randomCode = ThreadLocalRandom.current().nextInt(RANDOM_SIZE_MAX_VALUE * 2) - RANDOM_SIZE_MAX_VALUE;
+                            int randomCode = random.nextInt(RANDOM_SIZE_MAX_VALUE * 2) - RANDOM_SIZE_MAX_VALUE;
+                            String token = String.format("%06d", randomCode);
+                            verificationTokenService.save(user, token);
+                            emailService.sendEmail(u);
+                        } catch (MessagingException e) {
+                            e.printStackTrace();
+                        }
+                    }
+            );
             return userDto;
         } catch (Exception e) {
             e.printStackTrace();
@@ -115,6 +139,29 @@ public class UserServiceImpl extends MessageBundle implements UserService {
             logger.info("Username or Password wrong");
         }
         return null;
+    }
+
+    @Override
+    public ResponseData activateUser(String token) {
+        Optional<VerificationToken> optional = verificationTokenRepo.findByToken(token);
+        if (optional.isEmpty()) {
+            return ResponseData.ofFail(getMessage("Ko co token"));
+        } else {
+            User user = optional.get().getUser();
+            if (user.getIsActive().equals("0")) {
+                Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+                if (optional.get().getExpiryDate().before(timestamp)) {
+                    return ResponseData.ofFail(getMessage("Token het han"));
+                } else {
+                    user.setIsActive("1");
+                    userRepo.save(user);
+                    return ResponseData.ofSuccess(getMessage("Tai khoan da kich hoat"));
+                }
+            } else {
+                return ResponseData.ofSuccess(getMessage("Tai khoan da duoc active"));
+            }
+
+        }
     }
 
     private void validateSignUpUser(SignUpUserDto userDto) throws InputRequestException, ExistedDataException {

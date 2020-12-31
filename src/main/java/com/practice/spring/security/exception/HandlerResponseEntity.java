@@ -11,31 +11,31 @@ import org.springframework.web.multipart.MaxUploadSizeExceededException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 @ControllerAdvice()
-public class HandlerException extends ResponseEntityExceptionHandler {
-    private static final Logger logger = LoggerFactory.getLogger(HandlerException.class);
+public class HandlerResponseEntity extends ResponseEntityExceptionHandler {
+    private static final Logger log = LoggerFactory.getLogger(HandlerResponseEntity.class);
 
     @ExceptionHandler(InputRequestException.class)
     public ResponseEntity<ResponseData> handleBadRequestException(InputRequestException ex) {
-        logger.info("Bad request exception");
+        log.info("Bad request exception");
         return ResponseEntity.ok(ResponseData.ofFail(ex.getMessage()));
     }
 
     @ExceptionHandler(value = {IllegalArgumentException.class,
             IllegalStateException.class})
     public ResponseEntity<ResponseData> handleInternalServerException(InternalServerException ex) {
-        logger.info("Internal server exception");
+        log.info("Internal server exception");
         return ResponseEntity.ok(ResponseData.ofFail(ex.getMessage()));
     }
 
     @ExceptionHandler(ExistedDataException.class)
     public ResponseEntity<ResponseData> handleUserException(ExistedDataException ex) {
-        logger.info("Data existed exception");
+        log.info("Data existed exception");
         return ResponseEntity.ok(ResponseData.ofFail(ex.getMessage()));
     }
 
     @ExceptionHandler(MaxUploadSizeExceededException.class)
     public ResponseEntity<ResponseData> handleMaxSizeException(MaxUploadSizeExceededException ex) {
-        logger.info("File size exception");
+        log.info("File size exception");
         return ResponseEntity.ok(ResponseData.ofFail(ex.getMessage()));
     }
 }

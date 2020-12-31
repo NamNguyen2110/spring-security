@@ -5,9 +5,7 @@ import com.practice.spring.security.dto.SignInDto;
 import com.practice.spring.security.dto.SignUpUserDto;
 import io.swagger.annotations.Api;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Api("Role Api")
 @RequestMapping("/v1/api/users")
@@ -18,4 +16,6 @@ public interface UserApi {
     @PostMapping("/tokens")
     ResponseEntity<ResponseData> signInUser(@RequestBody SignInDto userDto);
 
+    @GetMapping("/activation")
+    ResponseEntity<ResponseData> activateUser(@RequestParam("token") String token);
 }

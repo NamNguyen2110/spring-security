@@ -28,7 +28,7 @@ public class RoleController implements RoleApi {
 //        try {
             List<RoleDto> data = roleService.createRoles(roleDto);
             return ResponseEntity.ok(ResponseData.ofSuccess(MessageBundle.getMessage("message.api.success"), data));
-//        } catch (Exception e) {
+//        } catch (ExistedDataException | InputRequestException e) {
 //            logger.info("Create role API Exception");
 //            return ResponseEntity.ok(ResponseData.ofFail(MessageBundle.getMessage("message.server")));
 //        }

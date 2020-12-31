@@ -14,28 +14,19 @@ import java.util.Calendar;
 @Service("verificationTokenService")
 @RequiredArgsConstructor
 public class VerificationTokenServiceImpl implements VerificationTokenService {
-    private final VerificationTokenRepository tokenRepo;
+    private final VerificationTokenRepository verificationTokenRepo;
 
     @Override
     @Transactional
-    public VerificationToken findByToken(String token) {
-        return tokenRepo.findByToken(token);
-    }
-
-    @Override
-    @Transactional
-    public VerificationToken findByUser(User user) {
-        return tokenRepo.findByUser(user);
-    }
-
-    @Override
     public void save(User user, String token) {
-//        VerificationToken token1 = new VerificationToken(user, token);
+        VerificationToken verificationToken = new VerificationToken(user, token);
+        verificationToken.setExpiryDate(calculateExpiryDate());
+        verificationTokenRepo.save(verificationToken);
     }
 
-    private Timestamp calculateExpiryDate(int expiryTimeInMinute) {
+    private Timestamp calculateExpiryDate() {
         Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.MINUTE, expiryTimeInMinute);
+        calendar.add(Calendar.MINUTE, 1440);
         return new Timestamp(calendar.getTime().getTime());
     }
 }

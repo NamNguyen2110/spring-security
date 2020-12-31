@@ -24,7 +24,7 @@ public class JpaAuditingConfig extends MessageBundle {
         @Override
         public Optional<String> getCurrentAuditor() {
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-            if (authentication == null) {
+            if (authentication.isAuthenticated()) {
                 try {
                     throw new InputRequestException(getMessage("message.server"));
                 } catch (InputRequestException e) {
