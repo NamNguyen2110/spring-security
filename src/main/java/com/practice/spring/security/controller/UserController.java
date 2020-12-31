@@ -22,24 +22,14 @@ public class UserController extends MessageBundle implements UserApi {
 
     @Override
     public ResponseEntity<ResponseData> signUpUser(SignUpUserDto userDto) {
-//        try {
         userService.signUpUser(userDto);
         return ResponseEntity.ok(ResponseData.ofSuccess(getMessage("message.api.success")));
-//        } catch (Exception e) {
-//            logger.info("Sign up API exception");
-//            return ResponseEntity.ok(ResponseData.ofFail(MessageBundle.getMessage("message.server")));
-//        }
     }
 
     @Override
     public ResponseEntity<ResponseData> signInUser(SignInDto userDto) {
-//        try {
         String token = userService.generateToken(userDto);
         return ResponseEntity.ok(ResponseData.ofSuccess(MessageBundle.getMessage("message.api.success"), token));
-//        } catch (Exception e) {
-//            logger.info("Sign in API exception");
-//            return ResponseEntity.ok(ResponseData.ofFail(MessageBundle.getMessage("message.server")));
-//        }
     }
 
     @Override

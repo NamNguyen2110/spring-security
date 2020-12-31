@@ -35,12 +35,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.mail.MessagingException;
+import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
-import java.util.UUID;
-import java.util.concurrent.ThreadLocalRandom;
 
 @Service("userService")
 @RequiredArgsConstructor
@@ -58,7 +57,7 @@ public class UserServiceImpl extends MessageBundle implements UserService {
     private final int RANDOM_SIZE_MAX_VALUE = 999999;
 
     @Override
-    @Transactional
+    @Transactional(rollbackFor = {SQLException.class})
     public SignUpUserDto signUpUser(SignUpUserDto userDto) {
         try {
             validateSignUpUser(userDto);
