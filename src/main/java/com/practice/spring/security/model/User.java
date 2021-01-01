@@ -38,6 +38,11 @@ public class User extends BaseModel implements Serializable {
         this.email = email;
     }
 
+    public User(String password, String email) {
+        this.password = password;
+        this.email = email;
+    }
+
     public User(String username, String password, String isActive, String email) {
         this.username = username;
         this.password = password;

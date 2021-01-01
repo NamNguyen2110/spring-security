@@ -25,8 +25,7 @@ public class RoleController implements RoleApi {
 
     @Override
     public ResponseEntity<ResponseData> createRole(List<RoleDto> roleDto) throws ExistedDataException, InputRequestException {
-            List<RoleDto> data = roleService.createRoles(roleDto);
-            return ResponseEntity.ok(ResponseData.ofSuccess(MessageBundle.getMessage("message.api.success"), data));
-
+        List<RoleDto> data = roleService.createRoles(roleDto);
+        return ResponseEntity.ok(ResponseData.ofSuccess(MessageBundle.getMessage("message.api.success.role"), data));
     }
 }

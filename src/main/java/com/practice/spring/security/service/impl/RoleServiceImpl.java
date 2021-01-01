@@ -30,7 +30,7 @@ public class RoleServiceImpl extends MessageBundle implements RoleService {
             if (roleRepo.existsByRoleName(dto.getRoleName())) {
                 throw new ExistedDataException(getMessage("message.existed"));
             }
-            if (dto.getRoleName().startsWith(RegexContant.ROLE)) {
+            if (!dto.getRoleName().startsWith(RegexContant.ROLE)) {
                 throw new InputRequestException(getMessage("message.role.invalid"));
             }
             Role role = ObjectMapperUtils.toDto(dto, Role.class);

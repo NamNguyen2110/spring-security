@@ -1,507 +1,89 @@
-2020-12-31 21:49:30.067  INFO 3904 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Starting SpringSecurityApplication using Java 12 on NguyenNam with PID 3904 (E:\PetProject\spring-security\target\classes started by Nguyen Van Nam in E:\PetProject\spring-security)
-2020-12-31 21:49:30.071  INFO 3904 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : No active profile set, falling back to default profiles: default
-2020-12-31 21:49:30.180  INFO 3904 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-12-31 21:49:30.180  INFO 3904 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-12-31 21:49:32.407  INFO 3904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-12-31 21:49:32.533  INFO 3904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117 ms. Found 4 JPA repository interfaces.
-2020-12-31 21:49:33.177  INFO 3904 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2d77f10a' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 21:49:33.186  INFO 3904 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 21:49:33.662  INFO 3904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-31 21:49:33.678  INFO 3904 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-31 21:49:33.679  INFO 3904 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
-2020-12-31 21:49:33.899  INFO 3904 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-31 21:49:33.900  INFO 3904 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3717 ms
-2020-12-31 21:49:34.056  WARN 3904 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-31 21:49:34.302  INFO 3904 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-31 21:49:34.393  INFO 3904 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-31 21:49:34.494  INFO 3904 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-31 21:49:34.711  INFO 3904 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-31 21:49:34.893  INFO 3904 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-31 21:49:35.048  INFO 3904 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER
-2020-12-31 21:49:35.059  INFO 3904 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER DETAILS
-2020-12-31 21:49:35.123  INFO 3904 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-31 21:49:35.147  INFO 3904 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-12-31 21:49:35.358  INFO 3904 --- [restartedMain] c.p.s.security.config.WebServiceConfig   : DISABLE CREDENTIALS
-2020-12-31 21:49:36.715  INFO 3904 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-31 21:49:36.729  INFO 3904 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-31 21:49:36.963  INFO 3904 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-12-31 21:49:37.086  INFO 3904 --- [restartedMain] c.p.s.security.config.SecurityConfig     : START IN FILTER
-2020-12-31 21:49:37.097  INFO 3904 --- [restartedMain] c.p.s.security.config.SecurityConfig     : PASSED IN FILTER
-2020-12-31 21:49:37.098  INFO 3904 --- [restartedMain] c.p.s.security.config.SecurityConfig     : IGNORE SECURITY ACCESS TO SWAGGER
-2020-12-31 21:49:37.099  INFO 3904 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
-2020-12-31 21:49:37.099  INFO 3904 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
-2020-12-31 21:49:37.100  INFO 3904 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
-2020-12-31 21:49:37.100  INFO 3904 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
-2020-12-31 21:49:37.101  INFO 3904 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
-2020-12-31 21:49:37.101  INFO 3904 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
-2020-12-31 21:49:37.240  INFO 3904 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@28ba027f, org.springframework.security.web.context.SecurityContextPersistenceFilter@3b9fbc4e, org.springframework.security.web.header.HeaderWriterFilter@695f86e1, org.springframework.web.filter.CorsFilter@6fababc6, org.springframework.security.web.authentication.logout.LogoutFilter@72f23596, com.practice.spring.security.security.AuthenticateFilter@3eb554c0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@fef7738, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55cc48b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7604149c, org.springframework.security.web.session.SessionManagementFilter@210a1efb, org.springframework.security.web.access.ExceptionTranslationFilter@722c9809, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@65845a54]
-2020-12-31 21:49:37.657  WARN 3904 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-12-31 21:49:37.792  INFO 3904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-31 21:49:38.130  INFO 3904 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-12-31 21:49:38.734  INFO 3904 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-12-31 21:49:38.752  INFO 3904 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Started SpringSecurityApplication in 9.749 seconds (JVM running for 12.717)
-2020-12-31 21:50:20.849  INFO 10056 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Starting SpringSecurityApplication using Java 12 on NguyenNam with PID 10056 (E:\PetProject\spring-security\target\classes started by Nguyen Van Nam in E:\PetProject\spring-security)
-2020-12-31 21:50:20.855  INFO 10056 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : No active profile set, falling back to default profiles: default
-2020-12-31 21:50:21.082  INFO 10056 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-12-31 21:50:21.083  INFO 10056 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-12-31 21:50:24.031  INFO 10056 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-12-31 21:50:24.179  INFO 10056 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132 ms. Found 4 JPA repository interfaces.
-2020-12-31 21:50:24.980  INFO 10056 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@a1a10de' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 21:50:24.992  INFO 10056 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 21:50:25.743  INFO 10056 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-31 21:50:25.766  INFO 10056 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-31 21:50:25.767  INFO 10056 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
-2020-12-31 21:50:26.095  INFO 10056 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-31 21:50:26.096  INFO 10056 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5007 ms
-2020-12-31 21:50:26.279  WARN 10056 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-31 21:50:26.934  INFO 10056 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-31 21:50:27.027  INFO 10056 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-31 21:50:27.162  INFO 10056 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-31 21:50:27.442  INFO 10056 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-31 21:50:27.643  INFO 10056 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-31 21:50:27.829  INFO 10056 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER
-2020-12-31 21:50:27.840  INFO 10056 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER DETAILS
-2020-12-31 21:50:27.970  INFO 10056 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-31 21:50:27.994  INFO 10056 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-12-31 21:50:28.104  INFO 10056 --- [restartedMain] c.p.s.security.config.WebServiceConfig   : DISABLE CREDENTIALS
-2020-12-31 21:50:30.103  INFO 10056 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-31 21:50:30.119  INFO 10056 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-31 21:50:30.582  INFO 10056 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-12-31 21:50:30.721  INFO 10056 --- [restartedMain] c.p.s.security.config.SecurityConfig     : START IN FILTER
-2020-12-31 21:50:30.739  INFO 10056 --- [restartedMain] c.p.s.security.config.SecurityConfig     : PASSED IN FILTER
-2020-12-31 21:50:30.740  INFO 10056 --- [restartedMain] c.p.s.security.config.SecurityConfig     : IGNORE SECURITY ACCESS TO SWAGGER
-2020-12-31 21:50:30.743  INFO 10056 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
-2020-12-31 21:50:30.743  INFO 10056 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
-2020-12-31 21:50:30.743  INFO 10056 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
-2020-12-31 21:50:30.744  INFO 10056 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
-2020-12-31 21:50:30.744  INFO 10056 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
-2020-12-31 21:50:30.745  INFO 10056 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
-2020-12-31 21:50:31.063  INFO 10056 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@42d66c5e, org.springframework.security.web.context.SecurityContextPersistenceFilter@6d4c5448, org.springframework.security.web.header.HeaderWriterFilter@237eae7c, org.springframework.web.filter.CorsFilter@58695b68, org.springframework.security.web.authentication.logout.LogoutFilter@3c5fb7e6, com.practice.spring.security.security.AuthenticateFilter@7f703710, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1cbf0a6d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@172012c0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2367ed56, org.springframework.security.web.session.SessionManagementFilter@61147a9e, org.springframework.security.web.access.ExceptionTranslationFilter@2a032ed, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@f72bae6]
-2020-12-31 21:50:31.863  WARN 10056 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-12-31 21:50:32.090  INFO 10056 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-31 21:50:32.832  INFO 10056 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-12-31 21:50:33.711  INFO 10056 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-12-31 21:50:33.731  INFO 10056 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Started SpringSecurityApplication in 13.881 seconds (JVM running for 16.472)
-2020-12-31 21:51:17.581  INFO 10056 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-31 21:51:17.582  INFO 10056 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-31 21:51:17.584  INFO 10056 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2020-12-31 21:51:17.620  WARN 10056 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /swagger-ui.html
-2020-12-31 21:52:04.327  INFO 3220 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Starting SpringSecurityApplication using Java 12 on NguyenNam with PID 3220 (E:\PetProject\spring-security\target\classes started by Nguyen Van Nam in E:\PetProject\spring-security)
-2020-12-31 21:52:04.332  INFO 3220 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : No active profile set, falling back to default profiles: default
-2020-12-31 21:52:04.500  INFO 3220 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-12-31 21:52:04.501  INFO 3220 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-12-31 21:52:07.725  INFO 3220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-12-31 21:52:07.887  INFO 3220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149 ms. Found 4 JPA repository interfaces.
-2020-12-31 21:52:08.683  INFO 3220 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6974b4f6' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 21:52:08.736  INFO 3220 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 21:52:09.303  INFO 3220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-31 21:52:09.315  INFO 3220 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-31 21:52:09.316  INFO 3220 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
-2020-12-31 21:52:09.531  INFO 3220 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-31 21:52:09.531  INFO 3220 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5028 ms
-2020-12-31 21:52:09.642  WARN 3220 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-31 21:52:09.853  INFO 3220 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-31 21:52:09.926  INFO 3220 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-31 21:52:10.016  INFO 3220 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-31 21:52:10.215  INFO 3220 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-31 21:52:10.414  INFO 3220 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-31 21:52:10.571  INFO 3220 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER
-2020-12-31 21:52:10.586  INFO 3220 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER DETAILS
-2020-12-31 21:52:10.656  INFO 3220 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-31 21:52:10.681  INFO 3220 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-12-31 21:52:10.835  INFO 3220 --- [restartedMain] c.p.s.security.config.WebServiceConfig   : DISABLE CREDENTIALS
-2020-12-31 21:52:12.045  INFO 3220 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-31 21:52:12.058  INFO 3220 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-31 21:52:12.213  INFO 3220 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-12-31 21:52:12.372  INFO 3220 --- [restartedMain] c.p.s.security.config.SecurityConfig     : START IN FILTER
-2020-12-31 21:52:12.378  INFO 3220 --- [restartedMain] c.p.s.security.config.SecurityConfig     : PASSED IN FILTER
-2020-12-31 21:52:12.379  INFO 3220 --- [restartedMain] c.p.s.security.config.SecurityConfig     : IGNORE SECURITY ACCESS TO SWAGGER
-2020-12-31 21:52:12.380  INFO 3220 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
-2020-12-31 21:52:12.380  INFO 3220 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
-2020-12-31 21:52:12.381  INFO 3220 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
-2020-12-31 21:52:12.382  INFO 3220 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
-2020-12-31 21:52:12.382  INFO 3220 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
-2020-12-31 21:52:12.382  INFO 3220 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
-2020-12-31 21:52:12.522  INFO 3220 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@565dfce0, org.springframework.security.web.context.SecurityContextPersistenceFilter@86d83d6, org.springframework.security.web.header.HeaderWriterFilter@475b6b1e, org.springframework.web.filter.CorsFilter@70b6c2b5, org.springframework.security.web.authentication.logout.LogoutFilter@8be7b2, com.practice.spring.security.security.AuthenticateFilter@2b9e2361, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@557fbf94, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3278bec9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@32b5561e, org.springframework.security.web.session.SessionManagementFilter@1b389e8, org.springframework.security.web.access.ExceptionTranslationFilter@3c0876d1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@344241e7]
-2020-12-31 21:52:13.081  INFO 3220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-31 21:52:13.412  INFO 3220 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-12-31 21:52:14.063  INFO 3220 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-12-31 21:52:14.084  INFO 3220 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Started SpringSecurityApplication in 10.563 seconds (JVM running for 13.099)
-2020-12-31 21:52:30.494  INFO 3220 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-31 21:52:30.495  INFO 3220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-31 21:52:30.498  INFO 3220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2020-12-31 21:52:30.553  WARN 3220 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /swagger-ui.html
-2020-12-31 21:55:38.126  INFO 5108 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Starting SpringSecurityApplication using Java 12 on NguyenNam with PID 5108 (E:\PetProject\spring-security\target\classes started by Nguyen Van Nam in E:\PetProject\spring-security)
-2020-12-31 21:55:38.132  INFO 5108 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : No active profile set, falling back to default profiles: default
-2020-12-31 21:55:38.228  INFO 5108 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-12-31 21:55:38.229  INFO 5108 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-12-31 21:55:40.933  INFO 5108 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-12-31 21:55:41.042  INFO 5108 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 4 JPA repository interfaces.
-2020-12-31 21:55:41.763  INFO 5108 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5b9dec8e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 21:55:41.792  INFO 5108 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 21:55:42.572  INFO 5108 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-31 21:55:42.589  INFO 5108 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-31 21:55:42.590  INFO 5108 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
-2020-12-31 21:55:42.872  INFO 5108 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-31 21:55:42.873  INFO 5108 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4642 ms
-2020-12-31 21:55:43.107  WARN 5108 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-31 21:55:43.362  INFO 5108 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-31 21:55:43.438  INFO 5108 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-31 21:55:43.562  INFO 5108 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-31 21:55:43.766  INFO 5108 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-31 21:55:43.994  INFO 5108 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-31 21:55:44.165  INFO 5108 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER
-2020-12-31 21:55:44.183  INFO 5108 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER DETAILS
-2020-12-31 21:55:44.282  INFO 5108 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-31 21:55:44.310  INFO 5108 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-12-31 21:55:44.540  INFO 5108 --- [restartedMain] c.p.s.security.config.WebServiceConfig   : DISABLE CREDENTIALS
-2020-12-31 21:55:45.966  INFO 5108 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-31 21:55:45.977  INFO 5108 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-31 21:55:46.158  INFO 5108 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-12-31 21:55:46.328  INFO 5108 --- [restartedMain] c.p.s.security.config.SecurityConfig     : START IN FILTER
-2020-12-31 21:55:46.335  INFO 5108 --- [restartedMain] c.p.s.security.config.SecurityConfig     : PASSED IN FILTER
-2020-12-31 21:55:46.336  INFO 5108 --- [restartedMain] c.p.s.security.config.SecurityConfig     : IGNORE SECURITY ACCESS TO SWAGGER
-2020-12-31 21:55:46.337  INFO 5108 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
-2020-12-31 21:55:46.337  INFO 5108 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
-2020-12-31 21:55:46.337  INFO 5108 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
-2020-12-31 21:55:46.337  INFO 5108 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
-2020-12-31 21:55:46.338  INFO 5108 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
-2020-12-31 21:55:46.338  INFO 5108 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
-2020-12-31 21:55:46.477  INFO 5108 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@abe2979, org.springframework.security.web.context.SecurityContextPersistenceFilter@45a6a497, org.springframework.security.web.header.HeaderWriterFilter@28095afe, org.springframework.web.filter.CorsFilter@38907506, org.springframework.security.web.authentication.logout.LogoutFilter@5425f519, com.practice.spring.security.security.AuthenticateFilter@46e42a48, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3ad20d0a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@560fce43, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c21d67d, org.springframework.security.web.session.SessionManagementFilter@4a08b9e8, org.springframework.security.web.access.ExceptionTranslationFilter@52b1f26, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2ed389e9]
-2020-12-31 21:55:47.116  INFO 5108 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-31 21:55:47.430  INFO 5108 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-12-31 21:55:48.095  INFO 5108 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-12-31 21:55:48.111  INFO 5108 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Started SpringSecurityApplication in 11.076 seconds (JVM running for 14.105)
-2020-12-31 21:55:57.013  INFO 5108 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-31 21:55:57.014  INFO 5108 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-31 21:55:57.018  INFO 5108 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2020-12-31 21:55:57.042  WARN 5108 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /swagger-ui.html
-2020-12-31 21:56:35.098  INFO 660 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Starting SpringSecurityApplication using Java 12 on NguyenNam with PID 660 (E:\PetProject\spring-security\target\classes started by Nguyen Van Nam in E:\PetProject\spring-security)
-2020-12-31 21:56:35.103  INFO 660 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : No active profile set, falling back to default profiles: default
-2020-12-31 21:56:35.226  INFO 660 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-12-31 21:56:35.227  INFO 660 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-12-31 21:56:37.624  INFO 660 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-12-31 21:56:37.772  INFO 660 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 136 ms. Found 4 JPA repository interfaces.
-2020-12-31 21:56:38.511  INFO 660 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@732261da' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 21:56:38.528  INFO 660 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 21:56:39.046  INFO 660 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-31 21:56:39.063  INFO 660 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-31 21:56:39.064  INFO 660 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
-2020-12-31 21:56:39.324  INFO 660 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-31 21:56:39.325  INFO 660 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4096 ms
-2020-12-31 21:56:39.477  WARN 660 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-31 21:56:39.714  INFO 660 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-31 21:56:39.798  INFO 660 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-31 21:56:39.902  INFO 660 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-31 21:56:40.189  INFO 660 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-31 21:56:40.411  INFO 660 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-31 21:56:40.581  INFO 660 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER
-2020-12-31 21:56:40.599  INFO 660 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER DETAILS
-2020-12-31 21:56:40.693  INFO 660 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-31 21:56:40.714  INFO 660 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-12-31 21:56:40.879  INFO 660 --- [restartedMain] c.p.s.security.config.WebServiceConfig   : DISABLE CREDENTIALS
-2020-12-31 21:56:42.234  INFO 660 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-31 21:56:42.245  INFO 660 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-31 21:56:42.416  INFO 660 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-12-31 21:56:42.591  INFO 660 --- [restartedMain] c.p.s.security.config.SecurityConfig     : START IN FILTER
-2020-12-31 21:56:42.598  INFO 660 --- [restartedMain] c.p.s.security.config.SecurityConfig     : PASSED IN FILTER
-2020-12-31 21:56:42.599  INFO 660 --- [restartedMain] c.p.s.security.config.SecurityConfig     : IGNORE SECURITY ACCESS TO SWAGGER
-2020-12-31 21:56:42.601  INFO 660 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
-2020-12-31 21:56:42.602  INFO 660 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
-2020-12-31 21:56:42.602  INFO 660 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
-2020-12-31 21:56:42.603  INFO 660 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
-2020-12-31 21:56:42.603  INFO 660 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
-2020-12-31 21:56:42.603  INFO 660 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
-2020-12-31 21:56:42.931  INFO 660 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@9b6ab81, org.springframework.security.web.context.SecurityContextPersistenceFilter@4cf52b70, org.springframework.security.web.header.HeaderWriterFilter@6f77e871, org.springframework.web.filter.CorsFilter@135cbf42, org.springframework.security.web.authentication.logout.LogoutFilter@200ca1c7, com.practice.spring.security.security.AuthenticateFilter@5cb310ec, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5dd46c82, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5fa4a5b6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ff49267, org.springframework.security.web.session.SessionManagementFilter@65c83da2, org.springframework.security.web.access.ExceptionTranslationFilter@3c9d31e0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7d5ce590]
-2020-12-31 21:56:43.435  INFO 660 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-31 21:56:43.802  INFO 660 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-12-31 21:56:44.473  INFO 660 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-12-31 21:56:44.493  INFO 660 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Started SpringSecurityApplication in 10.467 seconds (JVM running for 13.169)
-2020-12-31 21:57:03.843  INFO 660 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-31 21:57:03.844  INFO 660 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-31 21:57:03.847  INFO 660 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2020-12-31 22:50:47.053  INFO 11708 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Starting SpringSecurityApplication using Java 12 on NguyenNam with PID 11708 (E:\PetProject\spring-security\target\classes started by Nguyen Van Nam in E:\PetProject\spring-security)
-2020-12-31 22:50:47.057  INFO 11708 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : No active profile set, falling back to default profiles: default
-2020-12-31 22:50:47.227  INFO 11708 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-12-31 22:50:47.228  INFO 11708 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-12-31 22:50:49.631  INFO 11708 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-12-31 22:50:49.727  INFO 11708 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 4 JPA repository interfaces.
-2020-12-31 22:50:50.181  INFO 11708 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@74d28de5' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 22:50:50.197  INFO 11708 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 22:50:50.616  INFO 11708 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-31 22:50:50.629  INFO 11708 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-31 22:50:50.630  INFO 11708 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
-2020-12-31 22:50:50.809  INFO 11708 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-31 22:50:50.810  INFO 11708 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3580 ms
-2020-12-31 22:50:50.950  WARN 11708 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-31 22:50:51.115  INFO 11708 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-31 22:50:51.186  INFO 11708 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-31 22:50:51.300  INFO 11708 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-31 22:50:51.558  INFO 11708 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-31 22:50:51.750  INFO 11708 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-31 22:50:51.820  INFO 11708 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER
-2020-12-31 22:50:51.829  INFO 11708 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER DETAILS
-2020-12-31 22:50:52.007  INFO 11708 --- [restartedMain] c.p.s.security.config.WebServiceConfig   : DISABLE CREDENTIALS
-2020-12-31 22:50:52.068  INFO 11708 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-31 22:50:52.099  INFO 11708 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-12-31 22:50:54.056  INFO 11708 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-31 22:50:54.065  INFO 11708 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-31 22:50:54.204  INFO 11708 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-12-31 22:50:54.287  INFO 11708 --- [restartedMain] c.p.s.security.config.SecurityConfig     : START IN FILTER
-2020-12-31 22:50:54.293  INFO 11708 --- [restartedMain] c.p.s.security.config.SecurityConfig     : PASSED IN FILTER
-2020-12-31 22:50:54.294  INFO 11708 --- [restartedMain] c.p.s.security.config.SecurityConfig     : IGNORE SECURITY ACCESS TO SWAGGER
-2020-12-31 22:50:54.295  INFO 11708 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
-2020-12-31 22:50:54.296  INFO 11708 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
-2020-12-31 22:50:54.296  INFO 11708 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
-2020-12-31 22:50:54.296  INFO 11708 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
-2020-12-31 22:50:54.296  INFO 11708 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
-2020-12-31 22:50:54.296  INFO 11708 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
-2020-12-31 22:50:54.550  INFO 11708 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35d138f4, org.springframework.security.web.context.SecurityContextPersistenceFilter@4c9f8e74, org.springframework.security.web.header.HeaderWriterFilter@15e45f38, org.springframework.web.filter.CorsFilter@478b00a6, org.springframework.security.web.authentication.logout.LogoutFilter@17f03469, com.practice.spring.security.security.AuthenticateFilter@64ebc481, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1462454f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@57922b56, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ad69b9, org.springframework.security.web.session.SessionManagementFilter@3bd76685, org.springframework.security.web.access.ExceptionTranslationFilter@7745b9e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@299b667e]
-2020-12-31 22:50:55.025  INFO 11708 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-31 22:50:55.242  INFO 11708 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-12-31 22:50:55.754  INFO 11708 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-12-31 22:50:55.772  INFO 11708 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Started SpringSecurityApplication in 9.843 seconds (JVM running for 12.722)
-2020-12-31 22:51:00.391  INFO 11708 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-31 22:51:00.392  INFO 11708 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-31 22:51:00.396  INFO 11708 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2020-12-31 22:54:06.024  INFO 11444 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Starting SpringSecurityApplication using Java 12 on NguyenNam with PID 11444 (E:\PetProject\spring-security\target\classes started by Nguyen Van Nam in E:\PetProject\spring-security)
-2020-12-31 22:54:06.029  INFO 11444 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : No active profile set, falling back to default profiles: default
-2020-12-31 22:54:06.201  INFO 11444 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-12-31 22:54:06.263  INFO 11444 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-12-31 22:54:09.079  INFO 11444 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-12-31 22:54:09.280  INFO 11444 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 182 ms. Found 4 JPA repository interfaces.
-2020-12-31 22:54:10.014  INFO 11444 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5a399ea4' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 22:54:10.030  INFO 11444 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 22:54:10.612  INFO 11444 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-31 22:54:10.625  INFO 11444 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-31 22:54:10.626  INFO 11444 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
-2020-12-31 22:54:10.808  INFO 11444 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-31 22:54:10.808  INFO 11444 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4544 ms
-2020-12-31 22:54:10.901  WARN 11444 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-31 22:54:11.077  INFO 11444 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-31 22:54:11.138  INFO 11444 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-31 22:54:11.224  INFO 11444 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-31 22:54:11.424  INFO 11444 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-31 22:54:11.594  INFO 11444 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-31 22:54:11.772  INFO 11444 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER
-2020-12-31 22:54:11.794  INFO 11444 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER DETAILS
-2020-12-31 22:54:11.875  INFO 11444 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-31 22:54:11.901  INFO 11444 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-12-31 22:54:12.129  INFO 11444 --- [restartedMain] c.p.s.security.config.WebServiceConfig   : DISABLE CREDENTIALS
-2020-12-31 22:54:13.741  INFO 11444 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-31 22:54:13.755  INFO 11444 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-31 22:54:13.912  INFO 11444 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-12-31 22:54:14.021  INFO 11444 --- [restartedMain] c.p.s.security.config.SecurityConfig     : START IN FILTER
-2020-12-31 22:54:14.026  INFO 11444 --- [restartedMain] c.p.s.security.config.SecurityConfig     : PASSED IN FILTER
-2020-12-31 22:54:14.027  INFO 11444 --- [restartedMain] c.p.s.security.config.SecurityConfig     : IGNORE SECURITY ACCESS TO SWAGGER
-2020-12-31 22:54:14.029  INFO 11444 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
-2020-12-31 22:54:14.029  INFO 11444 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
-2020-12-31 22:54:14.030  INFO 11444 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
-2020-12-31 22:54:14.030  INFO 11444 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
-2020-12-31 22:54:14.030  INFO 11444 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
-2020-12-31 22:54:14.030  INFO 11444 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
-2020-12-31 22:54:14.178  INFO 11444 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5146432d, org.springframework.security.web.context.SecurityContextPersistenceFilter@41ed3487, org.springframework.security.web.header.HeaderWriterFilter@1894e5de, org.springframework.web.filter.CorsFilter@397391c8, org.springframework.security.web.authentication.logout.LogoutFilter@14f624c8, com.practice.spring.security.security.AuthenticateFilter@60527d2d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5257270a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b3bfa73, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@58e73c2f, org.springframework.security.web.session.SessionManagementFilter@40fe232d, org.springframework.security.web.access.ExceptionTranslationFilter@252757a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@52f75558]
-2020-12-31 22:54:14.714  INFO 11444 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-31 22:54:15.009  INFO 11444 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-12-31 22:54:15.557  INFO 11444 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-12-31 22:54:15.569  INFO 11444 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Started SpringSecurityApplication in 10.497 seconds (JVM running for 13.117)
-2020-12-31 22:54:52.172  INFO 11444 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-31 22:54:52.172  INFO 11444 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-31 22:54:52.175  INFO 11444 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2020-12-31 22:54:52.197  WARN 11444 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /swagger-ui.html
-2020-12-31 22:54:59.839  WARN 11444 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /swagger-ui.html
-2020-12-31 22:55:00.047  WARN 11444 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /swagger-ui.html
-2020-12-31 23:04:05.518  INFO 2336 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Starting SpringSecurityApplication using Java 12 on NguyenNam with PID 2336 (E:\PetProject\spring-security\target\classes started by Nguyen Van Nam in E:\PetProject\spring-security)
-2020-12-31 23:04:05.523  INFO 2336 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : No active profile set, falling back to default profiles: default
-2020-12-31 23:04:05.635  INFO 2336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-12-31 23:04:05.635  INFO 2336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-12-31 23:04:13.051  INFO 2336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-12-31 23:04:13.189  INFO 2336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 130 ms. Found 4 JPA repository interfaces.
-2020-12-31 23:04:13.777  INFO 2336 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@64f562b7' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 23:04:13.789  INFO 2336 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 23:04:14.211  INFO 2336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-31 23:04:14.225  INFO 2336 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-31 23:04:14.226  INFO 2336 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
-2020-12-31 23:04:14.400  INFO 2336 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-31 23:04:14.401  INFO 2336 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8764 ms
-2020-12-31 23:04:14.501  WARN 2336 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-31 23:04:14.698  INFO 2336 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-31 23:04:14.809  INFO 2336 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-31 23:04:14.915  INFO 2336 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-31 23:04:15.150  INFO 2336 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-31 23:04:15.296  INFO 2336 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-31 23:04:15.380  INFO 2336 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER
-2020-12-31 23:04:15.390  INFO 2336 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER DETAILS
-2020-12-31 23:04:15.500  INFO 2336 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-31 23:04:15.523  INFO 2336 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-12-31 23:04:15.576  INFO 2336 --- [restartedMain] c.p.s.security.config.WebServiceConfig   : DISABLE CREDENTIALS
-2020-12-31 23:04:16.822  INFO 2336 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-31 23:04:16.833  INFO 2336 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-31 23:04:17.012  INFO 2336 --- [restartedMain] c.p.s.security.config.SecurityConfig     : START IN FILTER
-2020-12-31 23:04:17.017  INFO 2336 --- [restartedMain] c.p.s.security.config.SecurityConfig     : PASSED IN FILTER
-2020-12-31 23:04:17.017  INFO 2336 --- [restartedMain] c.p.s.security.config.SecurityConfig     : IGNORE SECURITY ACCESS TO SWAGGER
-2020-12-31 23:04:17.019  INFO 2336 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
-2020-12-31 23:04:17.019  INFO 2336 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
-2020-12-31 23:04:17.019  INFO 2336 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
-2020-12-31 23:04:17.019  INFO 2336 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
-2020-12-31 23:04:17.020  INFO 2336 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
-2020-12-31 23:04:17.020  INFO 2336 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
-2020-12-31 23:04:17.251  INFO 2336 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77be3aea, org.springframework.security.web.context.SecurityContextPersistenceFilter@2bd95f26, org.springframework.security.web.header.HeaderWriterFilter@1809aa25, org.springframework.web.filter.CorsFilter@2171a269, org.springframework.security.web.authentication.logout.LogoutFilter@74dd6744, com.practice.spring.security.security.AuthenticateFilter@61f76531, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@9294fd0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@38cd23d5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@626aef12, org.springframework.security.web.session.SessionManagementFilter@1acfd1a2, org.springframework.security.web.access.ExceptionTranslationFilter@39bf097, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@64a657fb]
-2020-12-31 23:04:17.316  INFO 2336 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-12-31 23:04:17.640  INFO 2336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-31 23:04:17.891  INFO 2336 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-12-31 23:04:18.538  INFO 2336 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-12-31 23:04:18.560  INFO 2336 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Started SpringSecurityApplication in 13.958 seconds (JVM running for 16.446)
-2020-12-31 23:05:33.563  INFO 2336 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-31 23:05:33.563  INFO 2336 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-31 23:05:33.565  INFO 2336 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2020-12-31 23:07:56.571  INFO 11472 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Starting SpringSecurityApplication using Java 12 on NguyenNam with PID 11472 (E:\PetProject\spring-security\target\classes started by Nguyen Van Nam in E:\PetProject\spring-security)
-2020-12-31 23:07:56.575  INFO 11472 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : No active profile set, falling back to default profiles: default
-2020-12-31 23:07:56.676  INFO 11472 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-12-31 23:07:56.677  INFO 11472 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-12-31 23:07:58.408  INFO 11472 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-12-31 23:07:58.534  INFO 11472 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 4 JPA repository interfaces.
-2020-12-31 23:07:58.993  INFO 11472 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@496b4bfa' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 23:07:59.014  INFO 11472 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 23:07:59.368  INFO 11472 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-31 23:07:59.379  INFO 11472 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-31 23:07:59.380  INFO 11472 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
-2020-12-31 23:07:59.570  INFO 11472 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-31 23:07:59.570  INFO 11472 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2892 ms
-2020-12-31 23:07:59.697  WARN 11472 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-31 23:07:59.852  INFO 11472 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-31 23:07:59.909  INFO 11472 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-31 23:07:59.981  INFO 11472 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-31 23:08:00.202  INFO 11472 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-31 23:08:00.360  INFO 11472 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-31 23:08:00.499  INFO 11472 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER
-2020-12-31 23:08:00.512  INFO 11472 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER DETAILS
-2020-12-31 23:08:00.549  INFO 11472 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-31 23:08:00.565  INFO 11472 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-12-31 23:08:00.704  INFO 11472 --- [restartedMain] c.p.s.security.config.WebServiceConfig   : DISABLE CREDENTIALS
-2020-12-31 23:08:01.694  INFO 11472 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-31 23:08:01.704  INFO 11472 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-31 23:08:01.888  INFO 11472 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-12-31 23:08:01.949  INFO 11472 --- [restartedMain] c.p.s.security.config.SecurityConfig     : START IN FILTER
-2020-12-31 23:08:01.957  INFO 11472 --- [restartedMain] c.p.s.security.config.SecurityConfig     : PASSED IN FILTER
-2020-12-31 23:08:01.957  INFO 11472 --- [restartedMain] c.p.s.security.config.SecurityConfig     : IGNORE SECURITY ACCESS TO SWAGGER
-2020-12-31 23:08:01.965  INFO 11472 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
-2020-12-31 23:08:01.965  INFO 11472 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
-2020-12-31 23:08:01.965  INFO 11472 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
-2020-12-31 23:08:01.966  INFO 11472 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
-2020-12-31 23:08:01.966  INFO 11472 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
-2020-12-31 23:08:01.966  INFO 11472 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
-2020-12-31 23:08:02.199  INFO 11472 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2449d289, org.springframework.security.web.context.SecurityContextPersistenceFilter@3988f218, org.springframework.security.web.header.HeaderWriterFilter@623ae7f5, org.springframework.web.filter.CorsFilter@123112dc, org.springframework.security.web.authentication.logout.LogoutFilter@6c2b700c, com.practice.spring.security.security.AuthenticateFilter@1cabfcca, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7dc37f23, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c2c4255, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15109072, org.springframework.security.web.session.SessionManagementFilter@585c6295, org.springframework.security.web.access.ExceptionTranslationFilter@4a1cc961, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@77982ac6]
-2020-12-31 23:08:02.607  INFO 11472 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-31 23:08:02.854  INFO 11472 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-12-31 23:08:03.386  INFO 11472 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-12-31 23:08:03.399  INFO 11472 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Started SpringSecurityApplication in 7.659 seconds (JVM running for 9.896)
-2020-12-31 23:08:12.361  INFO 11472 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-31 23:08:12.362  INFO 11472 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-31 23:08:12.364  INFO 11472 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2020-12-31 23:09:17.204  INFO 11472 --- [http-nio-8080-exec-1] c.p.s.s.service.impl.UserServiceImpl     : Waiting a confirmation email.....
-2020-12-31 23:18:37.410  INFO 9884 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Starting SpringSecurityApplication using Java 12 on NguyenNam with PID 9884 (E:\PetProject\spring-security\target\classes started by Nguyen Van Nam in E:\PetProject\spring-security)
-2020-12-31 23:18:37.417  INFO 9884 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : No active profile set, falling back to default profiles: default
-2020-12-31 23:18:37.507  INFO 9884 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-12-31 23:18:37.509  INFO 9884 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-12-31 23:18:39.874  INFO 9884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-12-31 23:18:39.982  INFO 9884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 4 JPA repository interfaces.
-2020-12-31 23:18:40.505  INFO 9884 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3516ce27' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 23:18:40.520  INFO 9884 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 23:18:41.060  INFO 9884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-31 23:18:41.073  INFO 9884 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-31 23:18:41.074  INFO 9884 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
-2020-12-31 23:18:41.242  INFO 9884 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-31 23:18:41.243  INFO 9884 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3732 ms
-2020-12-31 23:18:41.367  WARN 9884 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-31 23:18:41.538  INFO 9884 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-31 23:18:41.600  INFO 9884 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-31 23:18:41.702  INFO 9884 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-31 23:18:41.932  INFO 9884 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-31 23:18:42.120  INFO 9884 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-31 23:18:42.165  INFO 9884 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER
-2020-12-31 23:18:42.175  INFO 9884 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER DETAILS
-2020-12-31 23:18:42.356  INFO 9884 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-31 23:18:42.395  INFO 9884 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-12-31 23:18:42.398  INFO 9884 --- [restartedMain] c.p.s.security.config.WebServiceConfig   : DISABLE CREDENTIALS
-2020-12-31 23:18:43.903  INFO 9884 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-31 23:18:43.914  INFO 9884 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-31 23:18:44.085  INFO 9884 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-12-31 23:18:44.144  INFO 9884 --- [restartedMain] c.p.s.security.config.SecurityConfig     : START IN FILTER
-2020-12-31 23:18:44.153  INFO 9884 --- [restartedMain] c.p.s.security.config.SecurityConfig     : PASSED IN FILTER
-2020-12-31 23:18:44.156  INFO 9884 --- [restartedMain] c.p.s.security.config.SecurityConfig     : IGNORE SECURITY ACCESS TO SWAGGER
-2020-12-31 23:18:44.160  INFO 9884 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
-2020-12-31 23:18:44.161  INFO 9884 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
-2020-12-31 23:18:44.163  INFO 9884 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
-2020-12-31 23:18:44.163  INFO 9884 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
-2020-12-31 23:18:44.164  INFO 9884 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
-2020-12-31 23:18:44.165  INFO 9884 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
-2020-12-31 23:18:44.557  INFO 9884 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5816a722, org.springframework.security.web.context.SecurityContextPersistenceFilter@41d39298, org.springframework.security.web.header.HeaderWriterFilter@652ff98c, org.springframework.web.filter.CorsFilter@283ff204, org.springframework.security.web.authentication.logout.LogoutFilter@6269d132, com.practice.spring.security.security.AuthenticateFilter@24bcfda6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2e80f0b6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44c445d0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b46186d, org.springframework.security.web.session.SessionManagementFilter@2103f9bb, org.springframework.security.web.access.ExceptionTranslationFilter@176500e6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@50a40fb3]
-2020-12-31 23:18:45.047  INFO 9884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-31 23:18:45.361  INFO 9884 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-12-31 23:18:45.852  INFO 9884 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-12-31 23:18:45.871  INFO 9884 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Started SpringSecurityApplication in 9.463 seconds (JVM running for 12.433)
-2020-12-31 23:19:39.549  INFO 9884 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-31 23:19:39.550  INFO 9884 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-31 23:19:39.552  INFO 9884 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2020-12-31 23:19:40.202  INFO 9884 --- [http-nio-8080-exec-1] c.p.s.s.service.impl.UserServiceImpl     : Waiting a confirmation email.....
-2020-12-31 23:21:03.010  INFO 7220 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Starting SpringSecurityApplication using Java 12 on NguyenNam with PID 7220 (E:\PetProject\spring-security\target\classes started by Nguyen Van Nam in E:\PetProject\spring-security)
-2020-12-31 23:21:03.015  INFO 7220 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : No active profile set, falling back to default profiles: default
-2020-12-31 23:21:03.105  INFO 7220 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-12-31 23:21:03.106  INFO 7220 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-12-31 23:21:04.941  INFO 7220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-12-31 23:21:05.063  INFO 7220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 4 JPA repository interfaces.
-2020-12-31 23:21:05.526  INFO 7220 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@328fcbd7' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 23:21:05.537  INFO 7220 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 23:21:05.957  INFO 7220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-31 23:21:05.968  INFO 7220 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-31 23:21:05.968  INFO 7220 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
-2020-12-31 23:21:06.125  INFO 7220 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-31 23:21:06.126  INFO 7220 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3018 ms
-2020-12-31 23:21:06.248  WARN 7220 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-31 23:21:06.400  INFO 7220 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-31 23:21:06.455  INFO 7220 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-31 23:21:06.536  INFO 7220 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-31 23:21:06.696  INFO 7220 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-31 23:21:06.831  INFO 7220 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-31 23:21:06.989  INFO 7220 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER
-2020-12-31 23:21:06.998  INFO 7220 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER DETAILS
-2020-12-31 23:21:07.022  INFO 7220 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-31 23:21:07.042  INFO 7220 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-12-31 23:21:07.169  INFO 7220 --- [restartedMain] c.p.s.security.config.WebServiceConfig   : DISABLE CREDENTIALS
-2020-12-31 23:21:08.099  INFO 7220 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-31 23:21:08.109  INFO 7220 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-31 23:21:08.242  INFO 7220 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-12-31 23:21:08.327  INFO 7220 --- [restartedMain] c.p.s.security.config.SecurityConfig     : START IN FILTER
-2020-12-31 23:21:08.334  INFO 7220 --- [restartedMain] c.p.s.security.config.SecurityConfig     : PASSED IN FILTER
-2020-12-31 23:21:08.335  INFO 7220 --- [restartedMain] c.p.s.security.config.SecurityConfig     : IGNORE SECURITY ACCESS TO SWAGGER
-2020-12-31 23:21:08.336  INFO 7220 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
-2020-12-31 23:21:08.336  INFO 7220 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
-2020-12-31 23:21:08.337  INFO 7220 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
-2020-12-31 23:21:08.338  INFO 7220 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
-2020-12-31 23:21:08.339  INFO 7220 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
-2020-12-31 23:21:08.339  INFO 7220 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
-2020-12-31 23:21:08.559  INFO 7220 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@606faa78, org.springframework.security.web.context.SecurityContextPersistenceFilter@64afe342, org.springframework.security.web.header.HeaderWriterFilter@5a54fbb, org.springframework.web.filter.CorsFilter@1b83fd2d, org.springframework.security.web.authentication.logout.LogoutFilter@1f72e24e, com.practice.spring.security.security.AuthenticateFilter@53e439b8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ac5d5a1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c6a101e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@41e0617a, org.springframework.security.web.session.SessionManagementFilter@6d898631, org.springframework.security.web.access.ExceptionTranslationFilter@3390be53, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@40f77c04]
-2020-12-31 23:21:08.903  INFO 7220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-31 23:21:09.138  INFO 7220 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-12-31 23:21:09.624  INFO 7220 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-12-31 23:21:09.638  INFO 7220 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Started SpringSecurityApplication in 7.472 seconds (JVM running for 10.386)
-2020-12-31 23:22:34.367  INFO 7220 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-31 23:22:34.367  INFO 7220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-31 23:22:34.370  INFO 7220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2020-12-31 23:22:34.961 ERROR 7220 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.transaction.UnexpectedRollbackException: Transaction silently rolled back because it has been marked as rollback-only] with root cause
+2021-01-02 00:00:27.254  INFO 4496 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-02 00:00:27.260  INFO 4496 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-02 00:00:27.268  INFO 4496 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2021-01-02 00:03:22.510  INFO 2460 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Starting SpringSecurityApplication using Java 12 on NguyenNam with PID 2460 (E:\PetProject\spring-security\target\classes started by Nguyen Van Nam in E:\PetProject\spring-security)
+2021-01-02 00:03:22.520  INFO 2460 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : No active profile set, falling back to default profiles: default
+2021-01-02 00:03:22.620  INFO 2460 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-02 00:03:22.620  INFO 2460 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-02 00:03:24.385  INFO 2460 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-01-02 00:03:24.480  INFO 2460 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 4 JPA repository interfaces.
+2021-01-02 00:03:24.968  INFO 2460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@14925843' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-02 00:03:24.978  INFO 2460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-02 00:03:25.357  INFO 2460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-01-02 00:03:25.367  INFO 2460 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-02 00:03:25.367  INFO 2460 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-01-02 00:03:25.530  INFO 2460 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-02 00:03:25.530  INFO 2460 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2908 ms
+2021-01-02 00:03:25.632  WARN 2460 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-02 00:03:25.781  INFO 2460 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-02 00:03:25.836  INFO 2460 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-02 00:03:25.932  INFO 2460 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-01-02 00:03:26.098  INFO 2460 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-02 00:03:26.236  INFO 2460 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-01-02 00:03:26.431  INFO 2460 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER
+2021-01-02 00:03:26.439  INFO 2460 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-01-02 00:03:26.439  INFO 2460 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER DETAILS
+2021-01-02 00:03:26.460  INFO 2460 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-01-02 00:03:26.639  INFO 2460 --- [restartedMain] c.p.s.security.config.WebServiceConfig   : DISABLE CREDENTIALS
+2021-01-02 00:03:27.680  INFO 2460 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-02 00:03:27.690  INFO 2460 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-02 00:03:27.883  INFO 2460 --- [restartedMain] c.p.s.security.config.SecurityConfig     : START IN FILTER
+2021-01-02 00:03:27.888  INFO 2460 --- [restartedMain] c.p.s.security.config.SecurityConfig     : PASSED IN FILTER
+2021-01-02 00:03:27.889  INFO 2460 --- [restartedMain] c.p.s.security.config.SecurityConfig     : IGNORE SECURITY ACCESS TO SWAGGER
+2021-01-02 00:03:27.890  INFO 2460 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-01-02 00:03:27.890  INFO 2460 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
+2021-01-02 00:03:27.891  INFO 2460 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-01-02 00:03:27.891  INFO 2460 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
+2021-01-02 00:03:27.891  INFO 2460 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-01-02 00:03:27.891  INFO 2460 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-01-02 00:03:28.123  INFO 2460 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2142d874, org.springframework.security.web.context.SecurityContextPersistenceFilter@23b21139, org.springframework.security.web.header.HeaderWriterFilter@76f0dd60, org.springframework.web.filter.CorsFilter@670aee3e, org.springframework.security.web.authentication.logout.LogoutFilter@7c31de42, com.practice.spring.security.security.AuthenticateFilter@d0dd782, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47764e8d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d60e179, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1844be7c, org.springframework.security.web.session.SessionManagementFilter@20a5cf8c, org.springframework.security.web.access.ExceptionTranslationFilter@40151d9a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@206ccc5e]
+2021-01-02 00:03:28.175  INFO 2460 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-02 00:03:28.505  INFO 2460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-02 00:03:28.751  INFO 2460 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-01-02 00:03:29.202  INFO 2460 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-01-02 00:03:29.215  INFO 2460 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Started SpringSecurityApplication in 7.639 seconds (JVM running for 10.132)
+2021-01-02 00:03:54.199  INFO 2460 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-02 00:03:54.199  INFO 2460 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-02 00:03:54.201  INFO 2460 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-01-02 00:03:54.509  INFO 2460 --- [http-nio-8080-exec-1] c.p.s.s.exception.HandlerResponseEntity  : Data existed exception
+2021-01-02 00:03:54.553  WARN 2460 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.practice.spring.security.exception.ExistedDataException: That role had been existed]
+2021-01-02 00:07:18.491  INFO 2460 --- [http-nio-8080-exec-3] c.p.s.s.exception.HandlerResponseEntity  : Data existed exception
+2021-01-02 00:07:18.493  WARN 2460 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.practice.spring.security.exception.ExistedDataException: That role had been existed]
+2021-01-02 00:07:30.973  INFO 2460 --- [http-nio-8080-exec-4] c.p.s.s.exception.HandlerResponseEntity  : Bad request exception
+2021-01-02 00:07:30.975  WARN 2460 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.practice.spring.security.exception.InputRequestException: That role must start with ROLE_...]
+2021-01-02 00:10:43.802  INFO 2460 --- [http-nio-8080-exec-6] c.p.s.s.service.impl.UserServiceImpl     : Waiting a confirmation email.....
+2021-01-02 00:10:48.595 ERROR 2460 --- [http-nio-8080-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.mail.MailSendException: Failed messages: javax.mail.SendFailedException: Invalid Addresses;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 553 5.1.3 The recipient address <string> is not a valid RFC-5321 address. b11sm49334451pfr.38 - gsmtp
+; message exceptions (1) are:
+Failed message 1: javax.mail.SendFailedException: Invalid Addresses;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 553 5.1.3 The recipient address <string> is not a valid RFC-5321 address. b11sm49334451pfr.38 - gsmtp
+] with root cause
 
-org.springframework.transaction.UnexpectedRollbackException: Transaction silently rolled back because it has been marked as rollback-only
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:752) ~[spring-tx-5.3.1.jar:5.3.1]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711) ~[spring-tx-5.3.1.jar:5.3.1]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:637) ~[spring-tx-5.3.1.jar:5.3.1]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:390) ~[spring-tx-5.3.1.jar:5.3.1]
+org.springframework.mail.MailSendException: Failed messages: javax.mail.SendFailedException: Invalid Addresses;
+  nested exception is:
+	com.sun.mail.smtp.SMTPAddressFailedException: 553 5.1.3 The recipient address <string> is not a valid RFC-5321 address. b11sm49334451pfr.38 - gsmtp
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:491) ~[spring-context-support-5.3.1.jar:5.3.1]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.3.1.jar:5.3.1]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.3.1.jar:5.3.1]
+	at com.practice.spring.security.service.impl.EmailServiceImpl.sendEmail(EmailServiceImpl.java:42) ~[classes/:na]
+	at com.practice.spring.security.service.impl.UserServiceImpl.lambda$signUpUser$6(UserServiceImpl.java:112) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresent(Optional.java:183) ~[na:na]
+	at com.practice.spring.security.service.impl.UserServiceImpl.signUpUser(UserServiceImpl.java:106) ~[classes/:na]
+	at com.practice.spring.security.service.impl.UserServiceImpl$$FastClassBySpringCGLIB$$75df3d48.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371) ~[spring-tx-5.3.1.jar:5.3.1]
 	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:134) ~[spring-tx-5.3.1.jar:5.3.1]
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.1.jar:5.3.1]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.1.jar:5.3.1]
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.1.jar:5.3.1]
-	at com.practice.spring.security.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$8538f667.signUpUser(<generated>) ~[classes/:na]
-	at com.practice.spring.security.controller.UserController.signUpUser(UserController.java:25) ~[classes/:na]
+	at com.practice.spring.security.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$e9ce97ca.signUpUser(<generated>) ~[classes/:na]
+	at com.practice.spring.security.controller.UserController.signUpUser(UserController.java:26) ~[classes/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
@@ -597,156 +179,6 @@ org.springframework.transaction.UnexpectedRollbackException: Transaction silentl
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
 	at java.base/java.lang.Thread.run(Thread.java:835) ~[na:na]
 
-2020-12-31 23:27:00.645 ERROR 7220 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.transaction.UnexpectedRollbackException: Transaction silently rolled back because it has been marked as rollback-only] with root cause
-
-org.springframework.transaction.UnexpectedRollbackException: Transaction silently rolled back because it has been marked as rollback-only
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:752) ~[spring-tx-5.3.1.jar:5.3.1]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711) ~[spring-tx-5.3.1.jar:5.3.1]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:637) ~[spring-tx-5.3.1.jar:5.3.1]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:390) ~[spring-tx-5.3.1.jar:5.3.1]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:134) ~[spring-tx-5.3.1.jar:5.3.1]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.1.jar:5.3.1]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.1.jar:5.3.1]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.1.jar:5.3.1]
-	at com.practice.spring.security.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$8538f667.signUpUser(<generated>) ~[classes/:na]
-	at com.practice.spring.security.controller.UserController.signUpUser(UserController.java:25) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.1.jar:5.3.1]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.1.jar:5.3.1]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.1.jar:5.3.1]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:893) ~[spring-webmvc-5.3.1.jar:5.3.1]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:807) ~[spring-webmvc-5.3.1.jar:5.3.1]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.1.jar:5.3.1]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061) ~[spring-webmvc-5.3.1.jar:5.3.1]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961) ~[spring-webmvc-5.3.1.jar:5.3.1]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.1.jar:5.3.1]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.1.jar:5.3.1]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.39.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.1.jar:5.3.1]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.39.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.39.jar:9.0.39]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:113) ~[spring-web-5.3.1.jar:5.3.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at com.practice.spring.security.security.AuthenticateFilter.doFilterInternal(AuthenticateFilter.java:54) ~[classes/:na]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.1.jar:5.3.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.1.jar:5.3.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.1.jar:5.3.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.1.jar:5.3.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.1.jar:5.3.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.1.jar:5.4.1]
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.1.jar:5.3.1]
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.1.jar:5.3.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.1.jar:5.3.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.1.jar:5.3.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.1.jar:5.3.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.1.jar:5.3.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.1.jar:5.3.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.1.jar:5.3.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
-	at java.base/java.lang.Thread.run(Thread.java:835) ~[na:na]
-
-2020-12-31 23:29:25.605  INFO 10100 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Starting SpringSecurityApplication using Java 12 on NguyenNam with PID 10100 (E:\PetProject\spring-security\target\classes started by Nguyen Van Nam in E:\PetProject\spring-security)
-2020-12-31 23:29:25.611  INFO 10100 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : No active profile set, falling back to default profiles: default
-2020-12-31 23:29:25.708  INFO 10100 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-12-31 23:29:25.711  INFO 10100 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-12-31 23:29:27.451  INFO 10100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-12-31 23:29:27.557  INFO 10100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 4 JPA repository interfaces.
-2020-12-31 23:29:28.020  INFO 10100 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3596c2b7' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 23:29:28.028  INFO 10100 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-12-31 23:29:28.390  INFO 10100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-31 23:29:28.400  INFO 10100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-31 23:29:28.401  INFO 10100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
-2020-12-31 23:29:28.573  INFO 10100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-31 23:29:28.573  INFO 10100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2855 ms
-2020-12-31 23:29:28.740  WARN 10100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-31 23:29:28.892  INFO 10100 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-31 23:29:28.946  INFO 10100 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-31 23:29:29.020  INFO 10100 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-31 23:29:29.184  INFO 10100 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-31 23:29:29.330  INFO 10100 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-31 23:29:29.471  INFO 10100 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER
-2020-12-31 23:29:29.480  INFO 10100 --- [restartedMain] c.p.s.security.config.SwaggerConfig      : SHOW SWAGGER DETAILS
-2020-12-31 23:29:29.514  INFO 10100 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-31 23:29:29.532  INFO 10100 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-12-31 23:29:29.671  INFO 10100 --- [restartedMain] c.p.s.security.config.WebServiceConfig   : DISABLE CREDENTIALS
-2020-12-31 23:29:30.774  INFO 10100 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-31 23:29:30.788  INFO 10100 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-31 23:29:30.966  INFO 10100 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-12-31 23:29:31.069  INFO 10100 --- [restartedMain] c.p.s.security.config.SecurityConfig     : START IN FILTER
-2020-12-31 23:29:31.076  INFO 10100 --- [restartedMain] c.p.s.security.config.SecurityConfig     : PASSED IN FILTER
-2020-12-31 23:29:31.077  INFO 10100 --- [restartedMain] c.p.s.security.config.SecurityConfig     : IGNORE SECURITY ACCESS TO SWAGGER
-2020-12-31 23:29:31.078  INFO 10100 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
-2020-12-31 23:29:31.079  INFO 10100 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/ui'] with []
-2020-12-31 23:29:31.079  INFO 10100 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
-2020-12-31 23:29:31.080  INFO 10100 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/security'] with []
-2020-12-31 23:29:31.080  INFO 10100 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
-2020-12-31 23:29:31.081  INFO 10100 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
-2020-12-31 23:29:31.349  INFO 10100 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4344d93d, org.springframework.security.web.context.SecurityContextPersistenceFilter@2dae0c57, org.springframework.security.web.header.HeaderWriterFilter@1015498c, org.springframework.web.filter.CorsFilter@6fb144c5, org.springframework.security.web.authentication.logout.LogoutFilter@61ba0115, com.practice.spring.security.security.AuthenticateFilter@34ab850a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@24c82db2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52b13d67, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@227621f, org.springframework.security.web.session.SessionManagementFilter@1966c7a2, org.springframework.security.web.access.ExceptionTranslationFilter@5da0ef04, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@553f3ccc]
-2020-12-31 23:29:31.744  INFO 10100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-31 23:29:32.041  INFO 10100 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-12-31 23:29:32.571  INFO 10100 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-12-31 23:29:32.593  INFO 10100 --- [restartedMain] c.p.s.s.SpringSecurityApplication        : Started SpringSecurityApplication in 7.784 seconds (JVM running for 10.359)
-2020-12-31 23:29:48.073  INFO 10100 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-31 23:29:48.073  INFO 10100 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-31 23:29:48.076  INFO 10100 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2020-12-31 23:29:48.736  INFO 10100 --- [http-nio-8080-exec-1] c.p.s.s.service.impl.UserServiceImpl     : Waiting a confirmation email.....
+2021-01-02 00:11:46.050  INFO 2460 --- [http-nio-8080-exec-7] c.p.s.s.service.impl.UserServiceImpl     : Waiting a confirmation email.....
+2021-01-02 00:12:04.527  INFO 2460 --- [http-nio-8080-exec-8] c.p.s.s.exception.HandlerResponseEntity  : Data existed exception
+2021-01-02 00:12:04.530  WARN 2460 --- [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.practice.spring.security.exception.ExistedDataException: Data existed]

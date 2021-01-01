@@ -31,4 +31,8 @@ public class VerificationToken implements Serializable {
         this.user = user;
         this.token = token;
     }
+
+    public VerificationToken(User user) {
+        this.user = user;
+    }
 }
